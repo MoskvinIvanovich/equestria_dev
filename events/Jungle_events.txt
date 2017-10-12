@@ -1,0 +1,196 @@
+add_namespace = jungle 
+country_event = { 
+  id = jungle.0 
+  title = jungle.0.t 
+  desc = jungle.0.d 
+    fire_only_once = yes 
+  is_triggered_only = yes 
+  option = { 
+      ai_chance = { 
+      factor = 15 
+    } 
+      add_political_power = 40 
+    name = jungle.0.a 
+     } 
+  option = { 
+      ai_chance = { 
+      factor = 15 
+    } 
+    name = jungle.0.b 
+    add_political_power = -60 
+    16 = {  add_extra_state_shared_building_slots = 2 
+        add_building_construction = { 
+          type = infrastructure 
+          level = 2 
+          instant_build = yes 
+        } 
+      } 
+      348 = {  add_extra_state_shared_building_slots = 2 
+        add_building_construction = { 
+          type = infrastructure 
+          level = 2 
+          instant_build = yes 
+        } 
+      } 
+     } 
+  option = { 
+      ai_chance = { 
+      factor = 70 
+    } 
+    name = jungle.0.c 
+     add_political_power = -90 
+        16 = {  add_extra_state_shared_building_slots = 3 
+        add_building_construction = { 
+          type = infrastructure 
+          level = 3 
+          instant_build = yes 
+        } 
+      } 
+      348 = {  add_extra_state_shared_building_slots = 3 
+        add_building_construction = { 
+          type = infrastructure 
+          level = 3 
+          instant_build = yes 
+        } 
+      } 
+     } 
+  } 
+ 
+country_event = { 
+  id = jungle.1 
+  title = jungle.1.t 
+  desc = jungle.1.d 
+    fire_only_once = yes 
+  is_triggered_only = yes 
+   
+  option = { 
+      ai_chance = { 
+      factor = 90 
+    } 
+    name = jungle.1.a 
+      add_political_power = 40 
+  } 
+   
+  option = { 
+      ai_chance = { 
+      factor = 10 
+    } 
+    name = jungle.1.b 
+    add_political_power = -90 
+    remove_ideas = JUN_gold_1 
+    add_ideas = JUN_gold_3 
+    hidden_effect = { 
+      set_country_flag = { JUN_likes_gold } 
+    } 
+  } 
+}
+country_event = { 
+  id = jungle.2 
+  title = jungle.2.t 
+  desc = jungle.2.d 
+    fire_only_once = yes 
+  is_triggered_only = yes 
+   
+  option = { 
+      ai_chance = { 
+      factor = 90 
+    } 
+    name = jungle.2.a 
+      add_political_power = 40 
+  } 
+   
+  option = { 
+      ai_chance = { 
+      factor = 10 
+    } 
+    name = jungle.2.b 
+    add_political_power = -90 
+    remove_ideas = JUN_conscript_natives 
+    add_ideas = JUN_conscript_natives_2 
+  } 
+}
+country_event = {  
+  id = jungle.3 
+  title = jungle.3.t 
+  desc = jungle.3.d 
+  picture = GFX_event_mare_republic 
+ 
+  trigger = { 
+    tag = JUN 
+        has_country_flag = JUN_hard_labour 
+  } 
+ 
+  mean_time_to_happen = { 
+    days = 420 
+  } 
+ 
+  option = { 
+    name = jungle.3.a 
+    add_political_power = -25 
+    add_manpower = -500 
+  } 
+} 
+country_event = {  
+  id = jungle.4 
+  title = jungle.4.t 
+  desc = jungle.4.d 
+  picture = GFX_event_mare_republic 
+ 
+  trigger = { 
+    tag = JUN 
+        has_country_flag = JUN_students  
+  } 
+ 
+  mean_time_to_happen = { 
+    days = 730 
+  } 
+ 
+  option = { 
+    name = jungle.4.a 
+    add_political_power = 50 
+    add_manpower = 1500 
+  } 
+} 
+country_event = {  
+  id = jungle.5 
+  title = jungle.5.t 
+  desc = jungle.5.d 
+  picture = GFX_event_mare_republic 
+ 
+  trigger = { 
+    tag = JUN 
+        has_country_flag = JUN_deserters  
+  } 
+ 
+  mean_time_to_happen = { 
+    days = 365 
+  } 
+ 
+  option = { 
+    name = jungle.5.a 
+    add_political_power = -25 
+    add_manpower = -1000 
+  } 
+}
+country_event = {  
+  id = jungle.6 
+  title = jungle.6.t 
+  desc = jungle.6.d 
+  picture = GFX_event_mare_republic 
+ 
+  trigger = { 
+    tag = JUN 
+        has_country_flag = JUN_likes_gold  
+    NOT = { has_idea = JUN_collapsed_mine } 
+  } 
+ 
+  mean_time_to_happen = { 
+    days = 730 
+  } 
+ 
+  option = { 
+    name = jungle.6.a 
+    add_political_power = -60 
+    add_timed_idea = { idea = JUN_collapsed_mine days = 70 } 
+  } 
+}   
