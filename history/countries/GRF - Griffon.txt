@@ -136,6 +136,12 @@ create_corps_commander = {
 	id = 10100
 }
 create_corps_commander = {
+	name = "Astreus Forestfeather"
+	picture = "Gabby.dds"
+	traits = { ranger }
+	skill = 2
+}
+create_corps_commander = {
 	name = "Gabriel"
 	picture = "Gabriel.tga"
 	traits = { trait_mountaineer }
