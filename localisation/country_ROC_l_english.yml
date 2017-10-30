@@ -1,0 +1,19 @@
+﻿l_english:
+### countryname ###
+
+ROC_neutrality:0 "Rockville"
+ROC_fascism:0 "Rock Empire"
+ROC_communism:0 "Rock Union"
+ROC_democratic:0 "Rocky Autonomy"
+ROC_neutrality_DEF:0 "Rockville"
+ROC_fascism_DEF:0 "Rock Empire"
+ROC_communism_DEF:0 "The Rock Union"
+ROC_democratic_DEF:0 "The Rocky Autonomy"
+ROC_fascism_ADJ:0 "Rockville"
+ROC_democratic_ADJ:0 "Rockville"
+ROC_neutrality_ADJ:0 "Rockville"
+ROC_communism_ADJ:0 "Rockville"
+### names ###
+### parties ###
+########## focus localisation ######
+### events ###

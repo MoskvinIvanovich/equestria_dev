@@ -1,0 +1,30 @@
+﻿l_english:
+### countryname ###
+
+DRG_neutrality:0 "Dragon Tribe"
+DRG_fascism:0 "Dragon Empire"
+DRG_communism:0 "Union of Dragon Communes"
+DRG_democratic:0 "United Dragon Isles"
+DRG_neutrality_DEF:0 "The Dragon Tribe"
+DRG_fascism_DEF:0 "The Dragon Empire"
+DRG_communism_DEF:0 "The Union of Dragon Communes"
+DRG_democratic_DEF:0 "The United Dragon Isles"
+DRG_fascism_ADJ:0 "Dragon Empires"
+DRG_democratic_ADJ:0 "Dragon Isles"
+DRG_neutrality_ADJ:0 "Dragon Tribes"
+DRG_communism_ADJ:0 "Dragon Unions"
+### names ###
+
+### parties ###
+ DRG_neutrality_party:0 "Dragon Dynasty"
+ DRG_communism_party:0 "DFCP"
+ DRG_communism_party_long:0 "Dragon's Free Collectivist Party"
+ DRG_democratic_party:0 "HPOTDM"
+ DRG_democratic_party_long:0 "Harmony Party of the Dragon Mainland"
+ DRG_fascism_party:0 "Imperial Rule"
+########## focus localisation ######
+DRG_new_shelters:0 "New Shelters"
+DRG_new_shelters_desc:0 "If we are going to further ourselves as dragons, we must improve our homes."
+DRG_warband_roads:0 "Warband Roads"
+DRG_warband_roads_desc:0 "If we are going to work as an efficient band of dragons, we need a new way of traveling our supplies and using supplies from the mountain."
+### events ###

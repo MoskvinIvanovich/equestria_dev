@@ -1,0 +1,19 @@
+﻿l_english:
+### countryname ###
+
+BUF_neutrality:0 "Buffalo Tribe"
+BUF_fascism:0 "Buffalo Cheifdom"
+BUF_communism:0 "Buffalo State"
+BUF_democratic:0 "Buffalo Republic"
+BUF_neutrality_DEF:0 "The Buffalo Tribe"
+BUF_fascism_DEF:0 "The Buffalo Chiefdom"
+BUF_communism_DEF:0 "The Buffalo State"
+BUF_democratic_DEF:0 "The Buffalo Republic"
+BUF_fascism_ADJ:0 "Buffalo Social Republic"
+BUF_democratic_ADJ:0 "Buffalo"
+BUF_neutrality_ADJ:0 "Buffalo Tribes"
+BUF_communism_ADJ:0 "Buffalo Unions"
+### names ###
+### parties ###
+########## focus localisation ######
+### events ###

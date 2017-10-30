@@ -1,0 +1,19 @@
+﻿l_english:
+### countryname ###
+
+PLB_neutrality:0 "Polar Bear Communities"
+PLB_fascism:0 "White Storm"
+PLB_communism:0 "Polar Bear Socialist Republic"
+PLB_democratic:0 "Polar Star"
+PLB_neutrality_DEF:0 "The Polar Bear Communities"
+PLB_fascism_DEF:0 "White Storm"
+PLB_communism_DEF:0 "The Polar Bear Socialist Republic"
+PLB_democratic_DEF:0 "Polar Star"
+PLB_fascism_ADJ:0 "Polar Bear"
+PLB_democratic_ADJ:0 "Polar Bear"
+PLB_neutrality_ADJ:0 "Polar Bear"
+PLB_communism_ADJ:0 "Polar Bear"
+### names ###
+### parties ###
+########## focus localisation ######
+### events ###
