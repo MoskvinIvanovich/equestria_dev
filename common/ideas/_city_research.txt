@@ -2,27 +2,12 @@ ideas = {
 
 	city_idea = {
 		law = yes
-		developed_country = {
-			picture = proper_science_base
-			allowed = {
-				OR = {
-					original_tag = EQS
-					original_tag = STG
-				}
-			}
-			removal_cost = -1
 
-			modifier = {
-			}
-
-
-			cancel_if_invalid = yes
-		}
 		proper_science_base = {
 			level = 1
 			cost = 40
 			allowed = {
-				is_griffon_continent_country = yes
+				always = yes
 			}
 			removal_cost = -1
 			available = {
@@ -37,6 +22,7 @@ ideas = {
 					}
 				}
 				has_country_flag = proper_science_base_unclocked
+				NOT = { is_griffon_continent_country = yes }
 				}
 			}
 			modifier = {
@@ -44,6 +30,7 @@ ideas = {
 			ai_will_do = {
    				factor = 100
 			}
+			default = yes
 			cancel_if_invalid = yes
 		}
 
@@ -136,7 +123,7 @@ ideas = {
    					}
    				}
 			}
-			default = yes
+			
 			cancel_if_invalid = no
 		}
 

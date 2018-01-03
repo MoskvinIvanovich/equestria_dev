@@ -7,11 +7,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			
 			available = {
 				NOT = { has_idea = modern_society }
 			}
             			removal_cost = -1
 			default = yes
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 
 			}
@@ -20,6 +24,9 @@ ideas = {
 			
 			cost = -1
 			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
 				always = yes
 			}
 			available = {
@@ -39,6 +46,9 @@ ideas = {
 			
 			cost = -1
 			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
 				always = yes
 			}
 			available = {
@@ -61,6 +71,9 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			available = {
 				NOT = { has_idea = modern_society }
 			}
@@ -80,6 +93,9 @@ ideas = {
 			
 			cost = -1
 			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
 				always = yes
 			}
 			available = {
@@ -107,6 +123,9 @@ ideas = {
 			available = {
 				NOT = { has_idea = modern_society }
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
                				production_factory_max_efficiency_factor = -0.10
                 				production_speed_buildings_factor = -1
@@ -122,7 +141,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+			allowed_civil_war = {
+				always = yes
+			}
 			picture = agrarian_society
             removal_cost = -1
 	
@@ -141,7 +162,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+			allowed_civil_war = {
+				always = yes
+			}
 			picture = agrarian_society
             removal_cost = -1
 	
@@ -160,7 +183,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+			allowed_civil_war = {
+				always = yes
+			}
 			picture = agrarian_society
             removal_cost = -1
 	
@@ -180,7 +205,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+			allowed_civil_war = {
+				always = yes
+			}
 			picture = agrarian_society
             removal_cost = -1
 	
@@ -196,7 +223,9 @@ ideas = {
 	
 	agrarian_society6 = {
 			
-			
+			allowed_civil_war = {
+				always = yes
+			}
 			allowed = {
 				always = no
 			}
@@ -216,7 +245,9 @@ ideas = {
 	
 	pre_industrial_society2 = {
 			
-			
+			allowed_civil_war = {
+				always = yes
+			}
 			allowed = {
 				always = no
 			}
@@ -236,7 +267,9 @@ ideas = {
 	
 	pre_industrial_society3 = {
 			
-			
+			allowed_civil_war = {
+				always = yes
+			}
 			allowed = {
 				always = no
 			}
@@ -256,7 +289,9 @@ ideas = {
 	
 	outdated_industry2 = {
 			
-			
+			allowed_civil_war = {
+				always = yes
+			}
 			allowed = {
 				always = no
 			}

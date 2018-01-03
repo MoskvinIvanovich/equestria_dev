@@ -20,8 +20,22 @@ on_actions = {
       }
       ### Development ####
       every_country = {
+        if = {
+        limit = { NOT = { owns_major_griffon_city = yes }
+        NOT = { owns_big_griffon_city = yes }
+        OR = {
+        NOT = { has_tech = melee_weapons1 }
+        NOT = { num_of_civilian_factories > 2 }
+        }
+        is_griffon_continent_country = yes
+        }
+        add_ideas = poor_science_base
+        }
+      }
+
+      every_country = {
         limit = { is_on_equestrian_continent = yes }
-        add_ideas = developed_country
+        add_ideas = proper_science_base
       }
       every_country = {
         if = {
@@ -679,3 +693,16 @@ on_capitulation = {
     }
   }
 }
+
+on_government_change = {
+    effect = {      
+      #Make sure Soviet can always create factions
+      if = {
+        limit = {
+          original_tag = ROOT
+          has_idea = outdated_industry
+        }
+        add_ideas = outdated_industry
+      }
+    }
+  }
