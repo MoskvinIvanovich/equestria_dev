@@ -15,6 +15,7 @@
 
 is_griffon_continent_country = {
   OR = {
+    original_tag = LUS
     original_tag = SRS
     original_tag = VED
     original_tag = FAT
@@ -254,6 +255,25 @@ is_big_griffon_core = {
       389 = { is_core_of = ROOT }
   }
 }
+is_generic_civil_war_tag = {
+  OR = {
+          tag = D01
+          tag = D02
+          tag = D03
+          tag = D04
+          tag = D05
+          tag = D06
+          tag = D07
+          tag = D08
+          tag = D09
+          tag = D10
+          tag = D11
+          tag = D12
+          tag = D13
+          tag = D14
+          tag = D15
+      }
+} 
 #### City control ####
 controls_fillydelphia = {
   12 = { is_controlled_by = ROOT }
