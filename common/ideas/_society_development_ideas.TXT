@@ -9,7 +9,7 @@ ideas = {
 			}
 
 			available = {
-				#NOT = { has_idea = modern_society }
+				has_idea = modern_society
 			}
       removal_cost = -1
 			allowed_civil_war = {
