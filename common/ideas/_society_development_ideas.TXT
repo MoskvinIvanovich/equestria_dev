@@ -2,17 +2,16 @@ ideas = {
     society_development_idea = {
     	law = yes
     	modern_society = {
-			
+      traits = { society_idea }
 
 			allowed = {
 				always = yes
 			}
-			
+
 			available = {
-				NOT = { has_idea = modern_society }
+				#NOT = { has_idea = modern_society }
 			}
-            			removal_cost = -1
-			default = yes
+      removal_cost = -1
 			allowed_civil_war = {
 				always = yes
 			}
@@ -21,8 +20,9 @@ ideas = {
 			}
 		}
 	outdated_industry = {
-			
+
 			cost = -1
+      traits = { society_idea }
 			allowed = {
 				always = yes
 			}
@@ -33,7 +33,7 @@ ideas = {
 				NOT = { has_idea = modern_society }
 			}
             			removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.1
                 			industrial_capacity_factory = -0.1
@@ -43,8 +43,9 @@ ideas = {
 			}
 		}
 	pre_industrial_society = {
-			
+
 			cost = -1
+      traits = { society_idea }
 			allowed = {
 				always = yes
 			}
@@ -55,7 +56,7 @@ ideas = {
 				NOT = { has_idea = modern_society }
 			}
             		removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.2
                 			industrial_capacity_factory = -0.2
@@ -66,8 +67,9 @@ ideas = {
 			}
 		}
 	agrarian_society = {
-			
+
 			cost = -1
+      traits = { society_idea }
 			allowed = {
 				always = yes
 			}
@@ -79,7 +81,7 @@ ideas = {
 			}
 
             		removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.50
                 			industrial_capacity_factory = -0.50
@@ -90,8 +92,9 @@ ideas = {
 			}
 		}
 	tribal_society = {
-			
+
 			cost = -1
+      traits = { society_idea }
 			allowed = {
 				always = yes
 			}
@@ -103,7 +106,7 @@ ideas = {
 			}
 
             			removal_cost = -1
-	
+
 			modifier = {
 				unity_factor = -0.3
                			production_factory_max_efficiency_factor = -0.70
@@ -117,6 +120,7 @@ ideas = {
 	### FOR SKELETONS AND THE HOLY ORDER
 		detached_country = {
 			cost = -1
+      traits = { society_idea }
 			allowed = {
 				always = yes
 			}
@@ -136,8 +140,8 @@ ideas = {
                 					}
 		}
 		agrarian_society2 = {
-			
-			
+
+    traits = { society_idea }
 			allowed = {
 				always = no
 			}
@@ -146,7 +150,7 @@ ideas = {
 			}
 			picture = agrarian_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.45
                 			industrial_capacity_factory = -0.45
@@ -157,8 +161,8 @@ ideas = {
 			}
 		}
 	agrarian_society3 = {
-			
-			
+
+  traits = { society_idea }
 			allowed = {
 				always = no
 			}
@@ -167,7 +171,7 @@ ideas = {
 			}
 			picture = agrarian_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.40
                 			industrial_capacity_factory = -0.40
@@ -178,8 +182,8 @@ ideas = {
 			}
 		}
 	agrarian_society4 = {
-			
-			
+
+  traits = { society_idea }
 			allowed = {
 				always = no
 			}
@@ -188,7 +192,7 @@ ideas = {
 			}
 			picture = agrarian_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.35
                 			industrial_capacity_factory = -0.35
@@ -200,8 +204,8 @@ ideas = {
 		}
 
 	agrarian_society5 = {
-			
-			
+
+  traits = { society_idea }
 			allowed = {
 				always = no
 			}
@@ -210,7 +214,7 @@ ideas = {
 			}
 			picture = agrarian_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.3
                 			industrial_capacity_factory = -0.3
@@ -220,9 +224,9 @@ ideas = {
                 			global_building_slots_factor = -0.07
 			}
 		}
-	
+
 	agrarian_society6 = {
-			
+  traits = { society_idea }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -232,7 +236,7 @@ ideas = {
 
 			picture = agrarian_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.25
                 			industrial_capacity_factory = -0.25
@@ -242,9 +246,9 @@ ideas = {
                 			global_building_slots_factor = -0.06
 			}
 		}
-	
+
 	pre_industrial_society2 = {
-			
+  traits = { society_idea }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -254,7 +258,7 @@ ideas = {
 
 			picture = pre_industrial_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.15
                 			industrial_capacity_factory = -0.15
@@ -264,9 +268,9 @@ ideas = {
                 			global_building_slots_factor = -0.03
 			}
 		}
-	
+
 	pre_industrial_society3 = {
-			
+  traits = { society_idea }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -276,7 +280,7 @@ ideas = {
 
 			picture = pre_industrial_society
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.11
                 			industrial_capacity_factory = -0.11
@@ -286,9 +290,9 @@ ideas = {
                 			global_building_slots_factor = -0.02
 			}
 		}
-	
+
 	outdated_industry2 = {
-			
+  traits = { society_idea }
 			allowed_civil_war = {
 				always = yes
 			}
@@ -298,7 +302,7 @@ ideas = {
 
 			picture = outdated_industry
             removal_cost = -1
-	
+
 			modifier = {
                			production_factory_max_efficiency_factor = -0.05
                 			industrial_capacity_factory = -0.05
@@ -308,5 +312,12 @@ ideas = {
                 			global_building_slots_factor = -0.01
 			}
 		}
-
+    dummy_idea_society = {
+    	default = yes
+      allowed = {
+        has_idea = dummy_idea_society
+      }
+      cancel_if_invalid = no
+    }
+}
 }

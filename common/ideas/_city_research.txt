@@ -2,9 +2,9 @@ ideas = {
 
 	city_idea = {
 		law = yes
-
 		proper_science_base = {
 			level = 1
+			traits = { science_idea }
 			cost = 40
 			allowed = {
 				always = yes
@@ -30,12 +30,12 @@ ideas = {
 			ai_will_do = {
    				factor = 100
 			}
-			default = yes
 			cancel_if_invalid = yes
 		}
 
 		big_science_base = {
 			level = 2
+			traits = { science_idea }
 			cost = 40
 			allowed = {
 				is_griffon_continent_country = yes
@@ -71,6 +71,7 @@ ideas = {
 		}
 		better_science_base = {
 			level = 3
+			traits = { science_idea }
 			cost = 40
 			allowed = {
 				is_griffon_continent_country = yes
@@ -102,6 +103,7 @@ ideas = {
 		}
 		poor_science_base = {
 			level = 4
+			traits = { science_idea }
 			cost = 40
 			removal_cost = -1
 			allowed = {
@@ -123,8 +125,19 @@ ideas = {
    					}
    				}
 			}
-			
+
 			cancel_if_invalid = no
 		}
-
+		dummy_idea_science = {
+			level = 5
+			traits = { science_idea }
+			cost = -1
+			removal_cost = -1
+			allowed = {
+				has_idea = dummy_idea_science
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+}
 }

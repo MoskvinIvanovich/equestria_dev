@@ -20,51 +20,74 @@ on_actions = {
       }
       ### Development ####
       every_country = {
+        limit = { NOT = { is_on_equestrian_continent = yes } }
         if = {
-        limit = { NOT = { owns_major_griffon_city = yes }
-        NOT = { owns_big_griffon_city = yes }
-        OR = {
-        NOT = { has_tech = melee_weapons1 }
-        NOT = { num_of_civilian_factories > 2 }
-        }
-        is_griffon_continent_country = yes
-        }
-        add_ideas = poor_science_base
+          limit = {
+            num_of_civilian_factories > 2
+            has_tech = melee_weapons1
+            NOT = { owns_big_griffon_city = yes }
+            NOT = { owns_major_griffon_city = yes }
+          }
+          add_ideas = better_science_base
+          else = {
+            if = {
+            limit = { owns_big_griffon_city = yes
+            }
+            add_ideas = big_science_base
+            else = {
+              if = {
+              limit = { owns_major_griffon_city = yes
+              }
+              add_ideas = proper_science_base
+              else = {
+                if = {
+                limit = { NOT = { owns_major_griffon_city = yes }
+                NOT = { owns_big_griffon_city = yes }
+                OR = {
+                NOT = { has_tech = melee_weapons1 }
+                NOT = { num_of_civilian_factories > 2 }
+                }
+                is_griffon_continent_country = yes
+                }
+                add_ideas = poor_science_base
+                }
+              }
+              }
+            }
+            }
+          }
         }
       }
 
       every_country = {
-        limit = { is_on_equestrian_continent = yes }
-        add_ideas = proper_science_base
-      }
-      every_country = {
-        if = {
         limit = {
-          num_of_civilian_factories > 2
-          has_tech = melee_weapons1
-          NOT = { owns_big_griffon_city = yes }
-          NOT = { owns_major_griffon_city = yes }
-          NOT = { is_on_equestrian_continent = yes }
-        }
-        add_ideas = better_science_base
-        }
-      }
-
-      every_country = {
-        if = {
-        limit = { owns_big_griffon_city = yes
-        }
-        add_ideas = big_science_base
-        }
-      }
-
-      every_country = {
-        if = {
-        limit = { owns_major_griffon_city = yes
+          OR = {
+            is_on_equestrian_continent = yes
+            has_idea = dummy_idea_science
+            NOT = {
+              has_idea_with_trait = science_idea
+            }
+          }
         }
         add_ideas = proper_science_base
+      }
+
+      every_country = {
+        limit = {
+          OR = {
+            has_idea = dummy_idea_society
+            NOT = {
+              has_idea_with_trait = society_idea
+            }
+          }
+        }
+        if = {
+          limit = { is_griffon_continent_country = yes }
+          add_ideas = outdated_industry
+          else = { add_ideas = modern_society }
         }
       }
+
       ### Development End ####
       EQS = {
         set_country_flag = manpower_laws_blocked
@@ -77,88 +100,49 @@ on_actions = {
   on_declare_war = {
   effect = {
     if = {
-        limit = {
-          is_generic_civil_war_tag = yes
-          FROM = {
-            OR = {
+      limit = {
+        original_tag = FROM
+        OR = {
+          has_idea = dummy_idea_society
+          #has_idea = modern_society
+          NOT = { has_idea_with_trait = society_idea }
+        }
+        FROM = {
+          OR = {
             has_idea = outdated_industry
             has_idea = pre_industrial_society
             has_idea = agrarian_society
             has_idea = tribal_society
             has_idea = detached_country
-            }
           }
         }
-    if = { limit = { FROM = { has_idea = outdated_industry } }
-    add_ideas = outdated_industry }
-    if = { limit = { FROM = { has_idea = pre_industrial_society } }
-    add_ideas = pre_industrial_society }
-    if = { limit = { FROM = { has_idea = agrarian_society } }
-    add_ideas = agrarian_society }
-    if = { limit = { FROM = { has_idea = tribal_society } }
-    add_ideas = tribal_society }
-    if = { limit = { FROM = { has_idea = detached_country } }
-    add_ideas = detached_country }
+      }
+      FROM = { ROOT = { transfer_society_ideas = yes } }
+      else = {
+        add_ideas = modern_society
       }
     }
-  }
-  on_declare_war = {
-  effect = {
     if = {
-        limit = {
-          is_generic_civil_war_tag = yes
-          FROM = {
-            OR = {
-            has_idea = big_science_base
-            has_idea = better_science_base
+      limit = {
+        original_tag = FROM
+        OR = {
+          has_idea = dummy_idea_science
+          has_idea = proper_science_base
+          NOT = { has_idea_with_trait = science_idea }
+        }
+        FROM = {
+          OR = {
             has_idea = poor_science_base
-            }
+            has_idea = better_science_base
+            has_idea = big_science_base
           }
         }
-    if = { limit = { FROM = { has_idea = big_science_base } }
-    add_ideas = big_science_base }
-    if = { limit = { FROM = { has_idea = better_science_base } }
-    add_ideas = better_science_base }
-    if = { limit = { FROM = { has_idea = poor_science_base } }
-    add_ideas = poor_science_base }
+      }
+      FROM = { ROOT = { transfer_science_ideas = yes } }
+      else = {
+        add_ideas = proper_science_base
       }
     }
-  }
-  on_declare_war = {
-  effect = {
-    if = {
-        limit = {
-          is_generic_civil_war_tag = yes
-          FROM = {
-            OR = {
-            has_idea = agrarian_society2
-            has_idea = agrarian_society3
-            has_idea = agrarian_society4
-            has_idea = agrarian_society5
-            has_idea = agrarian_society6
-            has_idea = pre_industrial_society2
-            has_idea = pre_industrial_society3
-            has_idea = outdated_industry2
-            }
-          }
-        }
-    if = { limit = { FROM = { has_idea = agrarian_society2 } }
-    add_ideas = agrarian_society2 }
-    if = { limit = { FROM = { has_idea = agrarian_society3 } }
-    add_ideas = agrarian_society3 }
-    if = { limit = { FROM = { has_idea = agrarian_society4 } }
-    add_ideas = agrarian_society4 }
-    if = { limit = { FROM = { has_idea = agrarian_society5 } }
-    add_ideas = agrarian_society5 }
-    if = { limit = { FROM = { has_idea = agrarian_society6 } }
-    add_ideas = agrarian_society6 }
-    if = { limit = { FROM = { has_idea = pre_industrial_society2 } }
-    add_ideas = pre_industrial_society2 }
-    if = { limit = { FROM = { has_idea = pre_industrial_society3 } }
-    add_ideas = pre_industrial_society3 }
-    if = { limit = { FROM = { has_idea = outdated_industry2 } }
-    add_ideas = outdated_industry2 }
-      }
     }
   }
   #FROM is state the nuke got dropped on
@@ -779,9 +763,55 @@ on_capitulation = {
     }
   }
 }
-
+#ROOT is free nation FROM is releaser
+on_release_as_free = {
+  effect = {
+    if = {
+      limit = {
+        OR = {
+          has_idea = dummy_idea_society
+          #has_idea = modern_society
+          NOT = { has_idea_with_trait = society_idea }
+        }
+        FROM = {
+          OR = {
+            has_idea = outdated_industry
+            has_idea = pre_industrial_society
+            has_idea = agrarian_society
+            has_idea = tribal_society
+            has_idea = detached_country
+          }
+        }
+      }
+      FROM = { ROOT = { transfer_society_ideas = yes } }
+      else = {
+        add_ideas = modern_society
+      }
+    }
+    if = {
+      limit = {
+        OR = {
+          has_idea = dummy_idea_science
+          #has_idea = modern_society
+          NOT = { has_idea_with_trait = science_idea }
+        }
+        FROM = {
+          OR = {
+            has_idea = poor_science_base
+            has_idea = better_science_base
+            has_idea = big_science_base
+          }
+        }
+      }
+      FROM = { ROOT = { transfer_science_ideas = yes } }
+      else = {
+        add_ideas = proper_science_base
+      }
+    }
+  }
+}
 on_government_change = {
-    effect = {      
+    effect = {
       #Make sure Soviet can always create factions
       if = {
         limit = {
