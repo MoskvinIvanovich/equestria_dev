@@ -130,7 +130,6 @@ ideas = {
 		}
 		dummy_idea_science = {
 			level = 5
-			traits = { science_idea }
 			cost = -1
 			removal_cost = -1
 			allowed = {
