@@ -97,11 +97,28 @@ on_actions = {
 
     }
   }
+  #FROM is war target
   on_declare_war = {
   effect = {
     if = {
       limit = {
+        OR = {
+          tag = EQS
+          FROM = { tag = EQS }
+        }
+      }
+      clr_country_flag = manpower_laws_blocked
+      clr_country_flag = economic_laws_blocked
+      FROM = {
+        clr_country_flag = manpower_laws_blocked
+        clr_country_flag = economic_laws_blocked
+      }
+    }
+    if = {
+      limit = {
+        has_civil_war = yes
         original_tag = FROM
+        FROM = { original_tag = ROOT }
         OR = {
           has_idea = dummy_idea_society
           #has_idea = modern_society
@@ -117,14 +134,18 @@ on_actions = {
           }
         }
       }
-      FROM = { ROOT = { transfer_society_ideas = yes } }
+      hidden_effect = {
+        FROM = { ROOT = { transfer_society_ideas = yes } }
+      }
       else = {
-        add_ideas = modern_society
+        hidden_effect = { add_ideas = modern_society }
       }
     }
     if = {
       limit = {
+        has_civil_war = yes
         original_tag = FROM
+        FROM = { original_tag = ROOT }
         OR = {
           has_idea = dummy_idea_science
           has_idea = proper_science_base
@@ -138,9 +159,9 @@ on_actions = {
           }
         }
       }
-      FROM = { ROOT = { transfer_science_ideas = yes } }
+      hidden_effect = { FROM = { ROOT = { transfer_science_ideas = yes } } }
       else = {
-        add_ideas = proper_science_base
+        hidden_effect = { add_ideas = proper_science_base }
       }
     }
     }
@@ -162,26 +183,6 @@ on_actions = {
         }
         news_event = { id = news.50 days = 1}
         set_country_flag = nuked_the_hive
-      }
-    }
-  }
-
-  #FROM is war target
-  on_declare_war = {
-    effect = {
-      if = {
-        limit = {
-          OR = {
-            tag = EQS
-            FROM = { tag = EQS }
-          }
-        }
-        clr_country_flag = manpower_laws_blocked
-        clr_country_flag = economic_laws_blocked
-        FROM = {
-          clr_country_flag = manpower_laws_blocked
-          clr_country_flag = economic_laws_blocked
-        }
       }
     }
   }
