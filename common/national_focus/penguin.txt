@@ -288,10 +288,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-				swap_ideas = {
-					remove_idea = pre_industrial_society3
-					add_idea = pre_industrial_society4
-				}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = pre_industrial_society4
 			}
 		}
 	}
