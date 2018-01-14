@@ -1,0 +1,6 @@
+objectTypes = {
+    pdxmesh = {
+        name = "EQS_infantry_rifle_mesh"
+        file = "gfx/models/units/EQS/EQS_infantry-export.mesh"
+    }
+}
